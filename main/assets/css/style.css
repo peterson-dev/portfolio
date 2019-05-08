@@ -1918,6 +1918,69 @@ u {
 
 /* -------------------------------- 
 
+Title: Hero
+Descr: A full-width callout section
+
+-------------------------------- */
+.hero {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 5.25em 0;
+  padding: var(--space-xxl) 0;
+  background-color: hsl(0, 0%, 100%);
+  background-color: var(--color-bg);
+  min-height: 380px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero .text-component .hero__label {
+  color: hsla(240, 4%, 20%, 0.6);
+  color: hsla(var(--color-contrast-high-h), var(--color-contrast-high-s), var(--color-contrast-high-l), 0.6);
+}
+
+@media (min-width: 64rem) {
+  .hero {
+    min-height: 540px;
+  }
+}
+
+.hero__content {
+  max-width: 45rem;
+  max-width: var(--container-width-sm);
+}
+
+.hero--center {
+  text-align: center;
+}
+
+.hero--center .hero__content {
+  margin: 0 auto;
+}
+
+.hero--center .hero__cta {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.hero--right-content {
+  text-align: right;
+}
+
+.hero--right-content .hero__content {
+  margin: 0 0 0 auto;
+}
+
+.hero--right-content .hero__cta {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+/* -------------------------------- 
+
 Title: Diagonal Hero
 Descr: Hero section variation w/ diagonal edges
 
@@ -1988,81 +2051,6 @@ Descr: Hero section variation w/ diagonal edges
 
 /* -------------------------------- 
 
-Title: Hero
-Descr: A full-width callout section
-
--------------------------------- */
-.hero {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  padding: 5.25em 0;
-  padding: var(--space-xxl) 0;
-  background-color: hsl(0, 0%, 100%);
-  background-color: var(--color-bg);
-  min-height: 380px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.hero .text-component .hero__label {
-  color: hsla(240, 4%, 20%, 0.6);
-  color: hsla(var(--color-contrast-high-h), var(--color-contrast-high-s), var(--color-contrast-high-l), 0.6);
-}
-
-@media (min-width: 64rem) {
-  .hero {
-    min-height: 540px;
-  }
-}
-
-.hero__content {
-  max-width: 45rem;
-  max-width: var(--container-width-sm);
-}
-
-.hero--center {
-  text-align: center;
-}
-
-.hero--center .hero__content {
-  margin: 0 auto;
-}
-
-.hero--center .hero__cta {
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-.hero--right-content {
-  text-align: right;
-}
-
-.hero--right-content .hero__content {
-  margin: 0 0 0 auto;
-}
-
-.hero--right-content .hero__cta {
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-}
-
-#hero1 {
-  background-image: url("../../../../app/assets/img/hero/hero-bg-img.jpg");
-}
-
-#hero2 {
-  background-image: url("../../../../app/assets/img/hero/hero-bg-img-02.jpg");
-}
-
-#hero3 {
-  background-image: url("../../../../app/assets/img/hero/hero-bg-img-03.jpg");
-}
-
-/* -------------------------------- 
-
 Title: Main Header
 Descr: Accessible website navigation
 
@@ -2109,9 +2097,14 @@ Descr: Accessible website navigation
   margin-bottom: var(--space-xs);
 }
 
+.current {
+  background-color: pink;
+}
+
 .main-header__nav-link {
   color: hsl(240, 8%, 12%);
   color: var(--color-contrast-higher);
+  text-decoration: none;
 }
 
 .main-header__nav-link[aria-current] {
@@ -2280,4 +2273,167 @@ Descr: Accessible website navigation
   .js .main-header__nav-trigger {
     display: none;
   }
+}
+
+/* -------------------------------- 
+
+Title: Main Footer
+Descr: Footer navigation
+
+-------------------------------- */
+.main-footer {
+  padding: 2em 0;
+  padding: var(--space-lg) 0;
+}
+
+@media (min-width: 64rem) {
+  .main-footer__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+}
+
+.main-footer__logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-bottom: 1.25em;
+  margin-bottom: var(--space-md);
+}
+
+.main-footer__logo a, .main-footer__logo svg, .main-footer__logo img {
+  width: 130px;
+  height: 32px;
+  display: block;
+}
+
+@media (min-width: 64rem) {
+  .main-footer__nav {
+    width: calc(100% - 420px);
+  }
+}
+
+@media (min-width: 80rem) {
+  .main-footer__nav {
+    width: auto;
+  }
+}
+
+.main-footer__nav-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-footer__nav-item {
+  display: grid;
+  grid-gap: 0.375em;
+  grid-gap: var(--space-xxs);
+  margin-bottom: 1.25em;
+  margin-bottom: var(--space-md);
+  width: 100%;
+  padding-right: 0.75em;
+  padding-right: var(--space-sm);
+}
+
+@media (min-width: 30rem) {
+  .main-footer__nav-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .main-footer__nav-item {
+    grid-gap: 0.5em;
+    grid-gap: var(--space-xs);
+    width: 240px;
+  }
+}
+
+.main-footer__nav-item a {
+  color: hsl(240, 1%, 48%);
+  color: var(--color-contrast-medium);
+}
+
+.main-footer__nav-item a:hover {
+  color: hsl(240, 4%, 20%);
+  color: var(--color-contrast-high);
+}
+
+@media (min-width: 80rem) {
+  .main-footer__nav-item a {
+    font-size: 0.9em;
+  }
+}
+
+.main-footer__colophon {
+  border-top: 1px solid hsl(240, 1%, 83%);
+  border-top: 1px solid var(--color-contrast-low);
+  padding-top: 0.25em;
+  padding-top: var(--space-xxxs);
+  margin-top: 1.25em;
+  margin-top: var(--space-md);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.main-footer__colophon-nav {
+  font-size: 0.83333em;
+  font-size: var(--text-sm);
+  color: hsl(240, 1%, 48%);
+  color: var(--color-contrast-medium);
+  margin-right: 0.75em;
+  margin-right: var(--space-sm);
+}
+
+.main-footer__colophon-nav > * {
+  margin-right: 0.375em;
+  margin-right: var(--space-xxs);
+}
+
+.main-footer__colophon-nav a {
+  color: inherit;
+}
+
+.main-footer__colophon-nav a:hover {
+  color: hsl(240, 4%, 20%);
+  color: var(--color-contrast-high);
+}
+
+.main-footer__socials {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.375em 0;
+  margin: var(--space-xxs) 0;
+}
+
+.main-footer__socials a {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 0.375em;
+  margin-left: var(--space-xxs);
+  color: hsl(240, 1%, 48%);
+  color: var(--color-contrast-medium);
+}
+
+.main-footer__socials a:hover {
+  color: hsl(240, 4%, 20%);
+  color: var(--color-contrast-high);
+}
+
+.main-footer__socials a svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  color: inherit;
 }

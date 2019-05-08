@@ -43,8 +43,13 @@ Descr: Accessible website navigation
     margin-bottom: var(--space-xs);
   }
   
+  .current { // menu nav link selector for current/active menu item
+    background-color: pink;
+  }
+
   .main-header__nav-link { // link within list item
     color: var(--color-contrast-higher);
+    text-decoration: none;
   
     &[aria-current] { // style of selected link
       color: var(--color-primary);
