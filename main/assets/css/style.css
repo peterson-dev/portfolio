@@ -1986,7 +1986,7 @@ Descr: Hero section variation w/ diagonal edges
 
 -------------------------------- */
 :root {
-  --hero-diagonal-offset: 75px;
+  --hero-diagonal-offset: 45px;
 }
 
 .hero--diagonal, .hero--diagonal-top, .hero--diagonal-bottom {
@@ -2015,32 +2015,32 @@ Descr: Hero section variation w/ diagonal edges
 
 @supports ((-webkit-clip-path: inset(50%)) or (clip-path: inset(50%))) {
   .hero--diagonal::before {
-    height: calc(100% + 150px);
+    height: calc(100% + 90px);
     height: calc(100% + var(--hero-diagonal-offset)*2);
-    top: -75px;
+    top: -45px;
     top: calc(var(--hero-diagonal-offset)*-1);
-    -webkit-clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
+    -webkit-clip-path: polygon(0% 0%, 100% 45px, 100% 100%, 0% calc(100% - 45px));
     -webkit-clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
-            clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
+            clip-path: polygon(0% 0%, 100% 45px, 100% 100%, 0% calc(100% - 45px));
             clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
   }
   .hero--diagonal-top::before {
-    height: calc(100% + 75px);
+    height: calc(100% + 45px);
     height: calc(100% + var(--hero-diagonal-offset));
-    top: -75px;
+    top: -45px;
     top: calc(var(--hero-diagonal-offset)*-1);
-    -webkit-clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 45px, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 45px, 100% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% 100%);
   }
   .hero--diagonal-bottom::before {
-    height: calc(100% + 75px);
+    height: calc(100% + 45px);
     height: calc(100% + var(--hero-diagonal-offset));
     top: 0;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 75px));
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 45px));
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 75px));
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 45px));
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
   }
 }
@@ -2436,4 +2436,48 @@ Descr: Footer navigation
   width: 1em;
   height: 1em;
   color: inherit;
+}
+
+/* -------------------------------- 
+
+Title: Text Background Effects
+Descr: A collection of text backgrounds animated on hover
+
+-------------------------------- */
+.text-bg-fx {
+  background-repeat: no-repeat;
+  will-change: background-size;
+  transition: background-size 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-size 0.3s var(--transition-ease-in-out);
+}
+
+.text-bg-fx:hover {
+  background-size: 100% 100%;
+}
+
+.text-bg-fx--scale-x {
+  padding: 0.125em 0;
+  padding: var(--space-xxxxs) 0;
+  background-image: linear-gradient(hsla(220, 90%, 56%, 0.2), hsla(220, 90%, 56%, 0.2));
+  background-image: linear-gradient(hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2));
+  background-size: 0% 100%;
+}
+
+.text-bg-fx--scale-y {
+  text-decoration: none;
+  background-image: linear-gradient(hsla(220, 90%, 56%, 0.2), hsla(220, 90%, 56%, 0.2));
+  background-image: linear-gradient(hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2));
+  background-size: 100% 2px;
+  background-position: center bottom;
+}
+
+.text-bg-fx--underline {
+  text-decoration: none;
+  background-image: linear-gradient(transparent calc(100% - 3px), currentColor calc(100% - 3px), currentColor calc(100% - 2px), transparent 2px);
+  background-size: 0% 100%;
+}
+
+.text-bg-fx--text-shadow {
+  text-shadow: 1.5px 0 hsl(0, 0%, 100%), -1.5px 0 hsl(0, 0%, 100%);
+  text-shadow: 1.5px 0 var(--color-bg), -1.5px 0 var(--color-bg);
 }
