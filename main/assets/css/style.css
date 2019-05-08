@@ -1986,7 +1986,7 @@ Descr: Hero section variation w/ diagonal edges
 
 -------------------------------- */
 :root {
-  --hero-diagonal-offset: 50px;
+  --hero-diagonal-offset: 75px;
 }
 
 .hero--diagonal, .hero--diagonal-top, .hero--diagonal-bottom {
@@ -2015,32 +2015,32 @@ Descr: Hero section variation w/ diagonal edges
 
 @supports ((-webkit-clip-path: inset(50%)) or (clip-path: inset(50%))) {
   .hero--diagonal::before {
-    height: calc(100% + 100px);
+    height: calc(100% + 150px);
     height: calc(100% + var(--hero-diagonal-offset)*2);
-    top: -50px;
+    top: -75px;
     top: calc(var(--hero-diagonal-offset)*-1);
-    -webkit-clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
+    -webkit-clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
     -webkit-clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
-            clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
+            clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
             clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
   }
   .hero--diagonal-top::before {
-    height: calc(100% + 50px);
+    height: calc(100% + 75px);
     height: calc(100% + var(--hero-diagonal-offset));
-    top: -50px;
+    top: -75px;
     top: calc(var(--hero-diagonal-offset)*-1);
-    -webkit-clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% 100%);
   }
   .hero--diagonal-bottom::before {
-    height: calc(100% + 50px);
+    height: calc(100% + 75px);
     height: calc(100% + var(--hero-diagonal-offset));
     top: 0;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 50px));
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 75px));
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 50px));
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 75px));
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
   }
 }
