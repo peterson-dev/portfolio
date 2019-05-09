@@ -42,10 +42,6 @@ Descr: Accessible website navigation
   .main-header__nav-item { // nav list item
     margin-bottom: var(--space-xs);
   }
-  
-  .current { // menu nav link selector for current/active menu item
-    background-color: pink;
-  }
 
   .main-header__nav-link { // link within list item
     color: var(--color-contrast-higher);

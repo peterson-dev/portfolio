@@ -6,6 +6,49 @@
   font: inherit;
 }
 
+/* custom */
+.partial-border {
+  width:350px; 
+  height:0px; 
+  background:white; 
+  position:relative;
+}
+
+.partial-border:after {
+  content:''; 
+  width:25%; 
+  height:2px; 
+  background:lightgray; 
+  position:absolute; 
+  bottom:-4px;
+}
+
+.nav-font {
+  font-weight: 100;
+  opacity: 0.6;
+  font-variant: small-caps;
+  font-size: 1.1em;
+  transition-property: opacity, font-weight, color;
+  transition-duration: .25s;
+  transition-timing-function: ease-in;
+}
+
+.nav-font:hover {
+  color: #6c63ff;
+  opacity: 1;
+  font-weight: 900;
+}
+
+/* menu nav link selector for current/active menu item */
+.current:after {
+  content: "";
+  display: block;
+  margin-right: auto; /* This will left align the border. */
+  width: 28px;
+  border-bottom: 2px solid #6c63ff; 
+  opacity: .75;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1167,7 +1210,7 @@ img, video, svg {
 }
 
 :root {
-  --font-primary: sans-serif;
+  --font-primary: 'Work Sans';
   --text-base-size: 1em;
   --text-scale-ratio: 1.2;
   --text-xs: calc(1em/var(--text-scale-ratio)/var(--text-scale-ratio));
@@ -1194,7 +1237,7 @@ img, video, svg {
 body {
   font-size: 1em;
   font-size: var(--text-base-size);
-  font-family: sans-serif;
+  font-family: 'Work Sans';
   font-family: var(--font-primary);
   color: hsl(240, 4%, 20%);
   color: var(--color-contrast-high);
@@ -2097,10 +2140,6 @@ Descr: Accessible website navigation
   margin-bottom: var(--space-xs);
 }
 
-.current {
-  background-color: pink;
-}
-
 .main-header__nav-link {
   color: hsl(240, 8%, 12%);
   color: var(--color-contrast-higher);
@@ -2480,4 +2519,126 @@ Descr: A collection of text backgrounds animated on hover
 .text-bg-fx--text-shadow {
   text-shadow: 1.5px 0 hsl(0, 0%, 100%), -1.5px 0 hsl(0, 0%, 100%);
   text-shadow: 1.5px 0 var(--color-bg), -1.5px 0 var(--color-bg);
+}
+
+/* -------------------------------- 
+
+Title: Testimonials
+Descr: A gallery of testimonial cards
+
+-------------------------------- */
+.testimonials__grid > * {
+  margin-bottom: 1.25em;
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 64rem) {
+  @supports (grid-area: auto) {
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0.75em;
+      grid-gap: var(--space-sm);
+    }
+    .testimonials__grid > * {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.testimonials__card {
+  background-color: hsl(0, 0%, 95%);
+  background-color: var(--color-contrast-lower);
+  padding: 1.25em;
+  padding: var(--component-padding);
+  border-radius: 0.25em;
+  border-radius: var(--radius);
+}
+
+.testimonials__card .icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  color: hsl(240, 1%, 83%);
+  color: var(--color-contrast-low);
+  margin-bottom: 0.375em;
+  margin-bottom: var(--space-xxs);
+}
+
+.testimonials__card footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 64rem) {
+  .testimonials__card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .testimonials__card footer {
+    margin-top: auto;
+  }
+}
+
+.testimonials__quote {
+  line-height: 1.4;
+  margin-bottom: 1.25em;
+  margin-bottom: var(--space-md);
+}
+
+.testimonials__img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 0.375em;
+  margin-right: var(--space-xxs);
+}
+
+.testimonials__img img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid hsl(0, 0%, 100%);
+  border: 2px solid var(--color-bg);
+}
+
+.testimonials__cite {
+  font-size: 0.83333em;
+  font-size: var(--text-sm);
+}
+
+.testimonials__cite span {
+  display: block;
+  color: hsl(240, 1%, 48%);
+  color: var(--color-contrast-medium);
+  margin-top: 0.125em;
+  margin-top: var(--space-xxxxs);
+}
+
+.testimonials--center-content .testimonials__card {
+  text-align: center;
+}
+
+.testimonials--center-content .testimonials__card .icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials--center-content .testimonials__card footer {
+  display: block;
+}
+
+.testimonials--center-content .testimonials__card .testimonials__img {
+  margin: 0 0 0.25em;
+  margin: 0 0 var(--space-xxxs);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
