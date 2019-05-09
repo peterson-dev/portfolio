@@ -1,0 +1,42 @@
+/* custom */
+.partial-border {
+    width:350px; 
+    height:0px; 
+    background:white; 
+    position:relative;
+  }
+  
+  .partial-border:after {
+    content:''; 
+    width:25%; 
+    height:2px; 
+    background:lightgray; 
+    position:absolute; 
+    bottom:-4px;
+  }
+  
+  .nav-font {
+    font-weight: 100;
+    opacity: 0.6;
+    font-variant: small-caps;
+    font-size: 1.1em;
+    transition-property: opacity, font-weight, color;
+    transition-duration: .25s;
+    transition-timing-function: ease-in;
+  }
+  
+  .nav-font:hover {
+    color: #6c63ff;
+    opacity: 1;
+    font-weight: 900;
+  }
+  
+  /* menu nav link selector for current/active menu item */
+  .current:after {
+    content: "";
+    display: block;
+    margin: 0 auto; /* This will left align the border. */
+    width: 28px;
+    border-bottom: 2px solid #6c63ff; 
+    opacity: .75;
+  }

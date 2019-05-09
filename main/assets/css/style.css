@@ -6,49 +6,6 @@
   font: inherit;
 }
 
-/* custom */
-.partial-border {
-  width:350px; 
-  height:0px; 
-  background:white; 
-  position:relative;
-}
-
-.partial-border:after {
-  content:''; 
-  width:25%; 
-  height:2px; 
-  background:lightgray; 
-  position:absolute; 
-  bottom:-4px;
-}
-
-.nav-font {
-  font-weight: 100;
-  opacity: 0.6;
-  font-variant: small-caps;
-  font-size: 1.1em;
-  transition-property: opacity, font-weight, color;
-  transition-duration: .25s;
-  transition-timing-function: ease-in;
-}
-
-.nav-font:hover {
-  color: #6c63ff;
-  opacity: 1;
-  font-weight: 900;
-}
-
-/* menu nav link selector for current/active menu item */
-.current:after {
-  content: "";
-  display: block;
-  margin-right: auto; /* This will left align the border. */
-  width: 28px;
-  border-bottom: 2px solid #6c63ff; 
-  opacity: .75;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1959,6 +1916,50 @@ u {
   white-space: nowrap;
 }
 
+/* custom */
+.partial-border {
+  width: 350px;
+  height: 0px;
+  background: white;
+  position: relative;
+}
+
+.partial-border:after {
+  content: '';
+  width: 25%;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  bottom: -4px;
+}
+
+.nav-font {
+  font-weight: 100;
+  opacity: 0.6;
+  font-variant: small-caps;
+  font-size: 1.1em;
+  transition-property: opacity, font-weight, color;
+  transition-duration: .25s;
+  transition-timing-function: ease-in;
+}
+
+.nav-font:hover {
+  color: #6c63ff;
+  opacity: 1;
+  font-weight: 900;
+}
+
+/* menu nav link selector for current/active menu item */
+.current:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  /* This will left align the border. */
+  width: 28px;
+  border-bottom: 2px solid #6c63ff;
+  opacity: .75;
+}
+
 /* -------------------------------- 
 
 Title: Hero
@@ -2029,7 +2030,7 @@ Descr: Hero section variation w/ diagonal edges
 
 -------------------------------- */
 :root {
-  --hero-diagonal-offset: 45px;
+  --hero-diagonal-offset: 50px;
 }
 
 .hero--diagonal, .hero--diagonal-top, .hero--diagonal-bottom {
@@ -2058,32 +2059,32 @@ Descr: Hero section variation w/ diagonal edges
 
 @supports ((-webkit-clip-path: inset(50%)) or (clip-path: inset(50%))) {
   .hero--diagonal::before {
-    height: calc(100% + 90px);
+    height: calc(100% + 100px);
     height: calc(100% + var(--hero-diagonal-offset)*2);
-    top: -45px;
+    top: -50px;
     top: calc(var(--hero-diagonal-offset)*-1);
-    -webkit-clip-path: polygon(0% 0%, 100% 45px, 100% 100%, 0% calc(100% - 45px));
+    -webkit-clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
     -webkit-clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
-            clip-path: polygon(0% 0%, 100% 45px, 100% 100%, 0% calc(100% - 45px));
+            clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
             clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
   }
   .hero--diagonal-top::before {
-    height: calc(100% + 45px);
+    height: calc(100% + 50px);
     height: calc(100% + var(--hero-diagonal-offset));
-    top: -45px;
+    top: -50px;
     top: calc(var(--hero-diagonal-offset)*-1);
-    -webkit-clip-path: polygon(0% 0%, 100% 45px, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 45px, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% var(--hero-diagonal-offset), 100% 100%, 0% 100%);
   }
   .hero--diagonal-bottom::before {
-    height: calc(100% + 45px);
+    height: calc(100% + 50px);
     height: calc(100% + var(--hero-diagonal-offset));
     top: 0;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 45px));
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 50px));
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 45px));
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 50px));
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--hero-diagonal-offset)));
   }
 }
@@ -2107,8 +2108,6 @@ Descr: Accessible website navigation
   position: relative;
   background-color: hsl(0, 0%, 100%);
   background-color: var(--color-bg);
-  border-bottom: 1px solid hsl(240, 1%, 83%);
-  border-bottom: 1px solid var(--color-contrast-low);
   z-index: 2;
   z-index: var(--zindex-header);
 }
@@ -2410,8 +2409,6 @@ Descr: Footer navigation
 }
 
 .main-footer__colophon {
-  border-top: 1px solid hsl(240, 1%, 83%);
-  border-top: 1px solid var(--color-contrast-low);
   padding-top: 0.25em;
   padding-top: var(--space-xxxs);
   margin-top: 1.25em;
