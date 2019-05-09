@@ -1,0 +1,57 @@
+/* -------------------------------- 
+
+Title: Features
+Descr: A section containing a list of features
+
+-------------------------------- */
+
+.features {}
+
+.features__item {
+  margin-bottom: var(--space-lg);
+
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--space-sm);
+  }
+}
+
+@supports (grid-area: auto) {
+  @include breakpoint(md) {
+    .features__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: var(--space-lg);
+    }
+  
+    .features__item {
+      margin-bottom: 0;
+    }    
+  }
+
+  @include breakpoint(xl) {
+    .features__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+// --img-sm -> set max-width for images
+.features--img-sm {
+  img {
+    max-width: 128px;
+  }
+}
+
+// center-content
+.features--center-content {
+  .features__item {
+    text-align: center;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

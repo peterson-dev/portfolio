@@ -2639,3 +2639,53 @@ Descr: A gallery of testimonial cards
   -ms-flex-pack: center;
       justify-content: center;
 }
+
+/* -------------------------------- 
+
+Title: Features
+Descr: A section containing a list of features
+
+-------------------------------- */
+.features__item {
+  margin-bottom: 2em;
+  margin-bottom: var(--space-lg);
+}
+
+.features__item img {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.75em;
+  margin-bottom: var(--space-sm);
+}
+
+@supports (grid-area: auto) {
+  @media (min-width: 64rem) {
+    .features__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2em;
+      grid-gap: var(--space-lg);
+    }
+    .features__item {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: 90rem) {
+    .features__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.features--img-sm img {
+  max-width: 128px;
+}
+
+.features--center-content .features__item {
+  text-align: center;
+}
+
+.features--center-content .features__item img {
+  margin-left: auto;
+  margin-right: auto;
+}
