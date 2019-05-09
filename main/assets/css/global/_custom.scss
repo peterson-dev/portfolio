@@ -30,6 +30,16 @@
     opacity: 1;
     font-weight: 900;
   }
+
+  .contact-me {
+    transition-property: opacity, color;
+    transition-duration: .25s;
+    transition-timing-function: ease-in;
+  }
+
+  .contact-me:hover {
+    color: #6c63ff;
+  }
   
   /* menu nav link selector for current/active menu item */
   .current:after {
