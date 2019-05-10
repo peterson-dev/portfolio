@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>bio | peterson dev</title>
@@ -35,26 +36,137 @@
 
 <body style="background: var(--color-contrast-lower);">
   <section class="hero hero--diagonal margin-top--sm">
-    <div class="container container--adaptive-sm">
-      <div class="hero__content">
+    <div class="container container--adaptive-md">
+      <div class="hero__content" style="max-width: var(--container-width-lg);">
         <div class="text-component">
-          <br>
-          <br>
           <h1 style="letter-spacing: .1em;">Some of Me.</h1>
           <div class="partial-border margin-bottom--lg"></div>
-          <p>I'm a motivated individual, committed to a life of learning, with a passion for computer science and a knack for embracing change.</p>
-          <p>I strive to contribute to better business outcomes by welcoming the opportunity to problem solve every single day.</p>
-          <p>My secrets to success are to stay curious and work together!</p>
-        </div>
-    
-        <div class="hero__cta flex flex--wrap flex--center-y flex--gap-sm margin-top--md">
-            <div class="testimonials__card">
+          <!-- details container start -->
+          <details class="details js-details margin-bottom--md"> 
+            <summary class="details__summary js-details__summary" role="button">
+              <span class="icon-text nav-font">
+                <svg class="icon icon--xs" aria-hidden="true" viewBox="0 0 12 12"><path d="M2.783.088A.5.5,0,0,0,2,.5v11a.5.5,0,0,0,.268.442A.49.49,0,0,0,2.5,12a.5.5,0,0,0,.283-.088l8-5.5a.5.5,0,0,0,0-.824Z"></path></svg>
+                <span style="letter-spacing: .1em;">What I Love</span>
+              </span>
+            </summary>
 
-          <p>Interested in working together? <a href="mailto:peterzen.dev@gmail.com" rel="noopener noreferrer" style="color:#6c63ff;" class="text-bg-fx text-bg-fx--underline text-bg-fx--text-shadow">Let's connect</a>.</p>
-          </div>
-          <br>
-          <br>
-          <br>
+            <div class="details__content text-component margin-top--xs js-details__content">
+              <p style="letter-spacing: .1em;">...about programming is that it gives you a lever to move the world. I love learning new languages, crunching data, sharing code, and solving hard problems, but more than all of that, I love that it gives me the power to make a positive change to people's lives.</p>
+            </div>
+          </details>
+        <!-- details container end -->
+        <!-- details container start -->
+          <details class="details js-details margin-bottom--md"> 
+            <summary class="details__summary js-details__summary" role="button">
+              <span class="icon-text nav-font">
+                <svg class="icon icon--xs" aria-hidden="true" viewBox="0 0 12 12"><path d="M2.783.088A.5.5,0,0,0,2,.5v11a.5.5,0,0,0,.268.442A.49.49,0,0,0,2.5,12a.5.5,0,0,0,.283-.088l8-5.5a.5.5,0,0,0,0-.824Z"></path></svg>
+                <span style="letter-spacing: .1em;">Some of My Skills</span>
+              </span>
+            </summary>
+
+            <div class="details__content text-component margin-top--xs js-details__content">
+              <section class="features margin-top--lg">
+                <div class="features__grid container container--adaptive"> 
+                <!-- features__item -->
+                  <div class="features__item" style="display: flex;">
+                    <div class="text-component">
+                      <h4 style="letter-spacing: .1em;"><i class="fas fa-pencil-ruler"></i> Design</h4>
+                      <ul>
+                        <li>UI/UX design</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>User Stories</li>
+                      </ul>
+                      <p style="letter-spacing: .1em; margin-bottom: 0.4rem; ">Tool Kit</p>
+                      <ul>
+                        <li>Inkscape</li>
+                        <li>GIMP</li>
+                      </ul>
+                    </div>
+                  </div> 
+                <!-- features__item -->
+                  <div class="features__item" style="display: flex;">
+                    <div class="text-component">
+                      <h4 style="letter-spacing: .1em;"><i class="fas fa-code"></i> Develop</h4>
+                      <p style="letter-spacing: .1em; margin-bottom: 0.4rem; ">Front End</p>
+                      <ul>
+                        <li>HTML5</li>
+                        <li>CSS3/SCSS</li>
+                        <li>Bootstrap 4</li>
+                        <li>JQuery</li>
+                        <li>Javescript (novice)</li>
+                      </ul>
+                      <p style="letter-spacing: .1em; margin-bottom: 0.4rem; ">Back End</p>
+                      <ul>
+                        <li>Django Web</li>
+                        <li>Python</li>
+                        <li>Ruby (novice)</li>
+                        <li>SQL (novice)</li>
+                      </ul>
+                      <p style="letter-spacing: .1em; margin-bottom: 0.4rem; ">Tool Kit</p>
+                      <ul>
+                        <li>Git/Github</li>
+                        <li>PostgreSQL/SQLite</li>
+                        <li>Cypress</li>
+                        <li>Selenium</li>
+                        <li>JMeter (novice)</li>
+                      </ul>
+                    </div> 
+                  </div> 
+                <!-- features__item -->
+                  <div class="features__item" style="display: flex;">
+                    <div class="text-component">
+                      <h4 style="letter-spacing: .1em;"><i class="fas fa-cloud"></i> Deploy</h4>
+                      <ul>
+                        <li>Heroku</li>
+                        <li>Jenkins</li>
+                      </ul>
+                    </div>
+                  </div>
+                
+                </div>
+              </section>
+            </div>
+          </details>
+        <!-- details container end -->
+        <!-- details container start -->
+          <details class="details js-details">
+            <summary class="details__summary js-details__summary" role="button">
+              <span class="icon-text nav-font">
+                <svg class="icon icon--xs" aria-hidden="true" viewBox="0 0 12 12"><path d="M2.783.088A.5.5,0,0,0,2,.5v11a.5.5,0,0,0,.268.442A.49.49,0,0,0,2.5,12a.5.5,0,0,0,.283-.088l8-5.5a.5.5,0,0,0,0-.824Z"></path></svg>
+                <span style="letter-spacing: .1em;">Why Work With Me</span>
+              </span>
+            </summary>
+
+            <div class="details__content text-component margin-top--xs js-details__content">
+              <section class="features features--img-sm margin-top--lg">
+                <div class="features__grid container container--adaptive"> 
+                  <div class="bio-box features__item">
+                    <img src="assets/img/heart-regular.svg">
+                    <div class="text-component">
+                      <h4>Passionate</h4>
+                      <p>I enjoy contributing to projects that make a difference. I enjoy helping others create success.</p>
+                    </div>
+                  </div>
+                  <div class="bio-box features__item">
+                    <img src="assets/img/lightbulb-solid.svg">
+                    <div class="text-component">
+                      <h4>Problem Solver</h4>
+                      <p>At the heart of every successful business is a problem solver. I thrive under pressure and in fast-paced environments.</p>
+                    </div>
+                  </div>
+                  <div class="bio-box features__item">
+                    <img src="assets/img/bolt-solid.svg">
+                    <div class="text-component">
+                      <h4>Fast Learner</h4>
+                      <p>I can learn anything, just give me 5 minutes ;) I'm valuable to your company beacuse of my ability to be molded to your stack.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </details>
+        <!-- details container end -->
           <br>
           <br>
         </div>

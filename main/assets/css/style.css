@@ -2003,6 +2003,11 @@ u {
   box-shadow: 0 2px 6px -2px black;
 }
 
+.bio-box {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
 /* -------------------------------- 
 
 Title: Hero
@@ -2731,4 +2736,67 @@ Descr: A section containing a list of features
 .features--center-content .features__item img {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* -------------------------------- 
+
+Title: Details
+Descr: A button that toggles the visibility of additional information
+
+-------------------------------- */
+.details__summary {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.details__summary:hover {
+  color: hsl(220, 90%, 56%);
+  color: var(--color-primary);
+}
+
+.details__summary:focus {
+  outline: 2px solid hsla(220, 90%, 56%, 0.2);
+  outline: 2px solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+  outline-offset: 4px;
+}
+
+.details__summary .icon {
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.js .details__summary {
+  list-style: none;
+}
+
+.js .details__summary .icon-text {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.js .details__summary::-webkit-details-marker {
+  display: none;
+}
+
+.js .details[open] .details__summary .icon {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.js .details__content[aria-hidden="true"] {
+  display: none;
+}
+
+html:not(.js) .details__summary .icon-text > * {
+  margin-left: 0;
+}
+
+html:not(.js) .details__summary .icon {
+  display: none;
 }
