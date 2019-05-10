@@ -20,8 +20,7 @@
     "codyhouse"
   ],
   "scripts": {
-    "start": "node app",
-    "postinstall": "gulp default",
+    "postinstall": "gulp build",
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
