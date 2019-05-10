@@ -20,7 +20,7 @@
     "codyhouse"
   ],
   "scripts": {
-    "start": "node gulpfile.js",
+    "start": "node index.js",
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
