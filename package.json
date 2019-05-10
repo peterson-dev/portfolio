@@ -20,7 +20,7 @@
     "codyhouse"
   ],
   "scripts": {
-    "postinstall": "gulp build",
+    "start": "gulpfile.js",
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
