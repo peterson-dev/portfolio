@@ -26,20 +26,18 @@
   },
   "author": "Amber Creative Lab <info@ambercreative.co>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "postcss-calc": "^7.0.1",
-    "postcss-css-variables": "git+https://github.com/CodyHouse/postcss-css-variables"
+    "postcss-css-variables": "git+https://github.com/CodyHouse/postcss-css-variables",
+    "express": "^4.16.4"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodyHouse/codyhouse-framework.git"
-  },
-  "dependencies": {
-    "express": "^4.16.4"
   }
 }
