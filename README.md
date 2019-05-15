@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href=".http://www.peterson-dev.com"">
+  <a href="http://www.peterson-dev.com">
     <img src="main/assets/img/favicon-1.png" alt="Logo" width="80" height="80">
   </a>
 
