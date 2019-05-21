@@ -19,8 +19,6 @@
   </p>
 </p>
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
 A personal page about yours truly :) 
 
 ### Built With
