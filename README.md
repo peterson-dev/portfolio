@@ -36,9 +36,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [CodyHouse](https://github.com/CodyHouse/codyhouse-framework) - SCSS component framework
-* [unDraw](https://undraw.co/illustrations) - major logo cred
+* [unDraw](https://undraw.co/illustrations) - logo
 * [Font Awesome](https://fontawesome.com)
-* [Clint](https://github.com/cndreisbach) - bio lingo cred
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-shield]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
