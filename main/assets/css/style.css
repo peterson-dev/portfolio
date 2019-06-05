@@ -1917,6 +1917,10 @@ u {
 }
 
 /* custom */
+#amazing {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
 .partial-border {
   width: 350px;
   height: 0px;
