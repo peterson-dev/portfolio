@@ -11,9 +11,9 @@
   <h3 align="center">peterson-dev.com</h3>
 
   <p align="center">
-    Personal/Project website hosted on Heroku.
+    : : : Website currently under maintenance : : :
     <br />
-    <a href="http://www.peterson-dev.com">View Demo</a>
+    <a href="">View Demo</a>
     ·
     <a href="https://github.com/peterson-dev/porfolio">Report Bug</a>
   </p>
